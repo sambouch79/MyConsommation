@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Myconsom.ConsultPage">
+    <ContentPage.Resources>
+
+        <Color x:Key="LightPrimaryColor">#33FF96</Color>
+        <Color x:Key="LightSecondaryColor">#33E1FF</Color>
+        <Color x:Key="LightEntryColor">#2196F3</Color>
+        <Color x:Key="lightColor">LightGray</Color>
+        <Color x:Key="lightwhite">White</Color>
+        <Color x:Key="Darkwhite">Black</Color>
+        <Style x:Key="clmColor" TargetType="Label">
+           
+              <Setter Property="BackgroundColor"
+                    Value="{AppThemeBinding Light={StaticResource lightwhite }, Dark={StaticResource LightPrimaryColor }}" />
+             
+              <Setter Property="TextColor"
+                    Value="{AppThemeBinding Light={StaticResource Darkwhite }, Dark={StaticResource lightwhite}}" />
+            
+        </Style>
+
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Page de Consultation"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" FontSize="Title"  />
+            
+            <ListView x:Name="ConsommationList" >
+                <ListView.Header  >
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.2*"  />
+                            <ColumnDefinition Width="0.1*" />
+                            <ColumnDefinition Width="0.1*" />
+                            <ColumnDefinition Width="0.1*" />
+                            <ColumnDefinition Width="0.1*" />
+                            <ColumnDefinition Width="0.1*" />
+                            <ColumnDefinition Width="0.1*" />
+                            <ColumnDefinition Width="0.1*" />
+                            <ColumnDefinition Width="0.1*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Text="Date" FontAttributes="Bold"  BackgroundColor="LightSkyBlue"  HorizontalTextAlignment="Center"/>
+                        <Label Grid.Column="1" Text="Elect HP" FontAttributes="Bold"  Style="{StaticResource clmColor}"/>
+                        <Label Grid.Column="2" Text="Elect HC" FontAttributes="Bold" Style="{StaticResource clmColor}" />
+                        <Label Grid.Column="3" Text="Gaz" FontAttributes="Bold" Style="{StaticResource clmColor}" />
+                        <Label Grid.Column="4" Text="Eau"  FontAttributes="Bold" Style="{StaticResource clmColor}" />
+                        <Label Grid.Column="5" Text="Hp/J" FontAttributes="Bold" BackgroundColor="LightSkyBlue"/>
+                        <Label Grid.Column="6" Text="Hc/J" FontAttributes="Bold" BackgroundColor="LightSkyBlue"/>
+                        <Label Grid.Column="7" Text="Gaz/J" FontAttributes="Bold" BackgroundColor="LightSkyBlue" />
+                        <Label Grid.Column="8" Text="Eau/j" FontAttributes="Bold" BackgroundColor="LightSkyBlue"/>
+                    </Grid>
+                </ListView.Header>
+                <ListView.ItemTemplate  TextColor="Black">
+                    <DataTemplate>
+                       
+                        <ViewCell>
+                        
+                            <Grid>
+                              
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.2*" />
+                                    <ColumnDefinition Width="0.1*" />
+                                    <ColumnDefinition Width="0.1*" />
+                                    <ColumnDefinition Width="0.1*" />
+                                    <ColumnDefinition Width="0.1*" />
+                                    <ColumnDefinition Width="0.1*" />
+                                    <ColumnDefinition Width="0.1*" />
+                                    <ColumnDefinition Width="0.1*" />
+                                    <ColumnDefinition Width="0.1*" />
+                                </Grid.ColumnDefinitions>
+
+
+                                <Label Grid.Column="0" Text="{Binding Date}" FontAttributes="Bold" />
+                                <Label Grid.Column="1" Text="{Binding Elect_Hp}"  />
+                                <Label Grid.Column="2" Text="{Binding Elect_Hc}"  />
+                                <Label Grid.Column="3" Text="{Binding Gaz}"  />
+                                <Label Grid.Column="4" Text="{Binding Eau}"  />
+                                <Label Grid.Column="5" Text="{Binding HpJour}" />
+                                <Label Grid.Column="6" Text="{Binding HcJour  }" />
+                                <Label Grid.Column="7" Text="{Binding gazJour}"  />
+                                <Label Grid.Column="8" Text="{Binding EauJour}" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+
+            
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

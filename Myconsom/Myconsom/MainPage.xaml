@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Myconsom.MainPage"
+          
+            >
+    <ContentPage.Resources>
+
+        <!-- Light colors -->
+        <Color x:Key="LightPrimaryColor">WhiteSmoke</Color>
+        <Color x:Key="LightSecondaryColor">Black</Color>
+        <Color x:Key="LightEntryColor">#2196F3</Color>
+        <Color x:Key="DarkEntryColor">#2196F3</Color>
+
+            <!-- Dark colors -->
+        <Color x:Key="DarkPrimaryColor">#2196F3</Color>
+        <Color x:Key="DarkSecondaryColor">White</Color>
+        <Color  x:Key="DarkButtonColor">gray</Color>
+
+        <Style x:Key="EntryStyle"
+               TargetType="Entry">
+            <Setter Property="BackgroundColor"
+                    Value="{AppThemeBinding Light={StaticResource LightPrimaryColor}, Dark={StaticResource DarkButtonColor}}" />
+            <Setter Property="TextColor"
+                    Value="{AppThemeBinding Light={StaticResource LightSecondaryColor}, Dark={StaticResource DarkSecondaryColor}}" />
+        </Style>
+        <Style x:Key="ButtonStyle"  TargetType="Button">
+            <Setter Property="BackgroundColor"
+                    Value="{AppThemeBinding Light={StaticResource DarkPrimaryColor}, Dark={StaticResource DarkButtonColor}}" />
+            <Setter Property="TextColor"
+                    Value="{AppThemeBinding Light={StaticResource DarkSecondaryColor}, Dark={StaticResource LightSecondaryColor}}" />
+        </Style>
+    
+      
+
+        <Style x:Key="stackStyle" TargetType="StackLayout" >
+            <Setter Property="BackgroundColor"
+                    Value="{AppThemeBinding Light={StaticResource DarkPrimaryColor}, Dark={StaticResource DarkButtonColor}}" />
+
+        </Style>
+        
+        <Style x:Key="LabelStyle" TargetType="Label" >
+            <Setter Property="TextColor"
+                    Value="{AppThemeBinding Light={StaticResource LightSecondaryColor}, Dark={StaticResource DarkSecondaryColor}}" />
+
+        </Style>
+     
+    </ContentPage.Resources>
+
+    <StackLayout  >
+        <Frame BackgroundColor="#2196F3" Padding="20" CornerRadius="0">
+            <Label Text="Gestion de Consommation" HorizontalTextAlignment="Center" TextColor="White" FontSize="28"/>
+        </Frame>
+
+        <DatePicker x:Name="datePicker"  HorizontalOptions="Center" Format="D" />
+        
+        <Label Text="Electricité HP" FontSize="Title" Padding="20 , 5"   Style="{StaticResource LabelStyle}"   />
+        <StackLayout  Padding="20 ,0"  >
+            <Entry Placeholder=" 0"  Keyboard="Plain"   x:Name="NewElectHp"  Style="{StaticResource EntryStyle}" />
+        </StackLayout>
+         
+        <Label Text="Electricité HC" FontSize="Title" Padding="20 , 5"  Style="{StaticResource LabelStyle}"  />
+        <StackLayout  Padding="20 ,0"  >
+            <Entry Placeholder="0 "  Keyboard="Plain"  ReturnType="Next"  x:Name="NewElectHc" Style="{StaticResource EntryStyle}"/>
+        </StackLayout>
+
+        <Label Text="Gaz" FontSize="Title" Padding="20 ,5"  Style="{StaticResource LabelStyle}"   />
+        <StackLayout  Padding="20 ,0" >
+            <Entry Placeholder=" 0"   Keyboard="Plain" ReturnType="Next"  x:Name="NewGaz" Style="{StaticResource EntryStyle}"/>
+         </StackLayout>
+
+        <Label Text="Eau" FontSize="Title" Padding="20 ,5"  Style="{StaticResource LabelStyle}"  />
+        <StackLayout  Padding="20 ,0" >
+            <Entry Placeholder=" 0"  Keyboard="Plain"     x:Name="NewEau"  Style="{StaticResource EntryStyle}"/>
+        </StackLayout>
+
+        <Grid >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5*" />
+            </Grid.RowDefinitions>
+
+            <Button Text="Ajouter" Grid.Column="0" Clicked="Register"  Style="{StaticResource ButtonStyle}"/>
+            <Button  Text="Consulter"  Grid.Column="1"  Clicked="Consult"  Style="{StaticResource ButtonStyle}"/>
+        
+        </Grid>
+        
+    </StackLayout>
+ 
+
+
+</ContentPage>

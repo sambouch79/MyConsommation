@@ -1,0 +1,15 @@
+C:\Users\samira\source\repos\Myconsom\Myconsom\Myconsom\bin\Debug\netstandard2.0\Myconsom.deps.json
+C:\Users\samira\source\repos\Myconsom\Myconsom\Myconsom\bin\Debug\netstandard2.0\Myconsom.dll
+C:\Users\samira\source\repos\Myconsom\Myconsom\Myconsom\bin\Debug\netstandard2.0\ref\Myconsom.dll
+C:\Users\samira\source\repos\Myconsom\Myconsom\Myconsom\bin\Debug\netstandard2.0\Myconsom.pdb
+C:\Users\samira\source\repos\Myconsom\Myconsom\Myconsom\obj\Debug\netstandard2.0\Myconsom.csprojAssemblyReference.cache
+C:\Users\samira\source\repos\Myconsom\Myconsom\Myconsom\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\samira\source\repos\Myconsom\Myconsom\Myconsom\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\samira\source\repos\Myconsom\Myconsom\Myconsom\obj\Debug\netstandard2.0\Myconsom.AssemblyInfoInputs.cache
+C:\Users\samira\source\repos\Myconsom\Myconsom\Myconsom\obj\Debug\netstandard2.0\Myconsom.AssemblyInfo.cs
+C:\Users\samira\source\repos\Myconsom\Myconsom\Myconsom\obj\Debug\netstandard2.0\Myconsom.csproj.CoreCompileInputs.cache
+C:\Users\samira\source\repos\Myconsom\Myconsom\Myconsom\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\samira\source\repos\Myconsom\Myconsom\Myconsom\obj\Debug\netstandard2.0\Myconsom.dll
+C:\Users\samira\source\repos\Myconsom\Myconsom\Myconsom\obj\Debug\netstandard2.0\ref\Myconsom.dll
+C:\Users\samira\source\repos\Myconsom\Myconsom\Myconsom\obj\Debug\netstandard2.0\Myconsom.pdb
+C:\Users\samira\source\repos\Myconsom\Myconsom\Myconsom\obj\Debug\netstandard2.0\ConsultPage.xaml.g.cs
